@@ -1,0 +1,24 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    // Visit https://aka.ms/tsconfig.json to read more about this file
+    // Instructing TypeScript to include the ECMAScript 2022 (ES2022) library during compilation
+    "lib": ["ES2022"],
+    // Remove all types to fix ts error
+    "types": [],
+    // Allow any usage
+    "noImplicitAny": false,
+    // Allow no export files
+    "isolatedModules": false,
+    // Doesn't work well with custom .d.ts files. It doesn't check them
+    // "skipLibCheck": false,
+    // Aliases
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["./src/*"]
+    },
+    "typeRoots": ["./src/types"],
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true
+  }
+}
